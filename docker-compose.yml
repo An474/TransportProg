@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  transport-app:
+    build: .
+    container_name: transport_department_app
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/data:/app/backend/data
+    environment:
+      - DATABASE_URL=sqlite:///./data/transport.db
+      - SECRET_KEY=corporate-transport-department-secure-key-2026
+      # To switch to PostgreSQL on server, simply uncomment below:
+      # - DATABASE_URL=postgresql+psycopg2://postgres:password@postgres-db:5432/transport_db
+
+  # Optional PostgreSQL service for cloud hosting:
+  # postgres-db:
+  #   image: postgres:15-alpine
+  #   container_name: transport_postgres
+  #   restart: unless-stopped
+  #   environment:
+  #     POSTGRES_USER: postgres
+  #     POSTGRES_PASSWORD: password
+  #     POSTGRES_DB: transport_db
+  #   volumes:
+  #     - pgdata:/var/lib/postgresql/data
+
+# volumes:
+#   pgdata:
