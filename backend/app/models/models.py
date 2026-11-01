@@ -226,7 +226,7 @@ class AuditLog(Base):
     __tablename__ = "audit_logs"
 
     id = Column(Integer, primary_key=True, index=True)
-    user_id = Column(Integer, ForeignKey("users.id"), nullable=True)
+    user_id = Column(Integer, ForeignKey("users.id", ondelete="SET NULL"), nullable=True)
     username = Column(String(50), nullable=False)
     entity_name = Column(String(50), nullable=False) # VEHICLE, DRIVER, WAYBILL, FINE, etc.
     entity_id = Column(Integer, nullable=True)

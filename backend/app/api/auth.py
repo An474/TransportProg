@@ -4,7 +4,7 @@ from sqlalchemy.orm import Session
 
 from app.core.database import get_db
 from app.core.security import verify_password, get_password_hash, create_access_token
-from app.models.models import User
+from app.models.models import User, AuditLog
 from app.schemas.schemas import LoginRequest, Token, UserOut, UserCreate, UserUpdate
 from app.api.deps import get_current_user, require_roles, record_audit
 
@@ -103,6 +103,8 @@ def delete_user(
     if not target:
         raise HTTPException(status_code=404, detail="Пользователь не найден")
     username = target.username
+    # Clear user_id in audit logs before deletion to preserve audit trail without violating foreign keys
+    db.query(AuditLog).filter(AuditLog.user_id == user_id).update({AuditLog.user_id: None})
     db.delete(target)
     db.commit()
     record_audit(db, current_user, "USER", user_id, "DELETE", {"username": username})
