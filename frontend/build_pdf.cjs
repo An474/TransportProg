@@ -47,13 +47,13 @@ const htmlContent = `
     margin: 0;
     padding: 0;
     background: #ffffff;
-    font-size: 11pt;
+    font-size: 10.5pt;
   }
 
   .page {
     page-break-after: always;
     position: relative;
-    padding-bottom: 10px;
+    padding-bottom: 8px;
   }
 
   .page:last-child {
@@ -66,84 +66,87 @@ const htmlContent = `
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 250mm;
+    min-height: 255mm;
     text-align: center;
     background: linear-gradient(145deg, #0f274a 0%, #1a4275 100%);
     color: #ffffff;
-    border-radius: 12px;
+    border-radius: 8px;
     padding: 40px 30px;
     box-sizing: border-box;
   }
 
   .cover-icon {
-    font-size: 64pt;
-    margin-bottom: 20px;
+    font-size: 52pt;
+    margin-bottom: 16px;
   }
 
   .cover-title {
     font-size: 26pt;
     font-weight: 700;
-    margin: 0 0 12px 0;
+    margin: 0 0 10px 0;
     color: #ffffff;
     letter-spacing: -0.5px;
     line-height: 1.2;
+    text-transform: uppercase;
   }
 
   .cover-subtitle {
-    font-size: 15pt;
+    font-size: 14pt;
     color: #93c5fd;
-    margin: 0 0 35px 0;
+    margin: 0 0 30px 0;
     font-weight: 500;
   }
 
   .cover-badge {
     display: inline-block;
-    background: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 8px 24px;
-    border-radius: 30px;
-    font-size: 12pt;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 6px 20px;
+    border-radius: 20px;
+    font-size: 10.5pt;
     color: #ffffff;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
   }
 
-  .cover-greeting {
-    background: rgba(255, 255, 255, 0.95);
+  .cover-desc {
+    background: rgba(255, 255, 255, 0.96);
     color: #1f2937;
-    border-radius: 10px;
-    padding: 24px 30px;
+    border-radius: 8px;
+    padding: 22px 28px;
     max-width: 580px;
     text-align: left;
-    font-size: 11pt;
+    font-size: 10pt;
     line-height: 1.6;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
   }
 
-  .cover-greeting h4 {
+  .cover-desc h4 {
     margin: 0 0 8px 0;
     color: #1e40af;
-    font-size: 13pt;
+    font-size: 12pt;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
   }
 
   /* Page Headers */
   .header {
     border-bottom: 2px solid #2563eb;
-    padding-bottom: 8px;
-    margin-bottom: 14px;
+    padding-bottom: 6px;
+    margin-bottom: 12px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
   }
 
   .header h2 {
-    font-size: 16pt;
+    font-size: 14pt;
     color: #1e3a8a;
     margin: 0;
     font-weight: 700;
   }
 
   .header .section-tag {
-    font-size: 9pt;
+    font-size: 8.5pt;
     color: #6b7280;
     text-transform: uppercase;
     font-weight: 600;
@@ -151,9 +154,9 @@ const htmlContent = `
   }
 
   .intro-text {
-    font-size: 10pt;
+    font-size: 9.5pt;
     color: #4b5563;
-    margin: 0 0 12px 0;
+    margin: 0 0 10px 0;
     line-height: 1.4;
   }
 
@@ -161,10 +164,10 @@ const htmlContent = `
   .shot-wrap {
     position: relative;
     border: 1px solid #d1d5db;
-    border-radius: 8px;
+    border-radius: 6px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    margin-bottom: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+    margin-bottom: 10px;
     background: #f9fafb;
   }
 
@@ -176,8 +179,8 @@ const htmlContent = `
   /* Callout Badges */
   .pin {
     position: absolute;
-    width: 26px;
-    height: 26px;
+    width: 24px;
+    height: 24px;
     background: #ef4444;
     color: #ffffff;
     border-radius: 50%;
@@ -185,22 +188,9 @@ const htmlContent = `
     align-items: center;
     justify-content: center;
     font-weight: 800;
-    font-size: 11pt;
-    box-shadow: 0 0 0 3px #ffffff, 0 3px 8px rgba(0,0,0,0.4);
+    font-size: 10pt;
+    box-shadow: 0 0 0 2.5px #ffffff, 0 2px 6px rgba(0,0,0,0.4);
     z-index: 10;
-    animation: pulse 2s infinite;
-  }
-
-  .pin-blue {
-    background: #2563eb;
-  }
-
-  .pin-green {
-    background: #10b981;
-  }
-
-  .pin-purple {
-    background: #8b5cf6;
   }
 
   /* Explanation Cards */
@@ -208,16 +198,16 @@ const htmlContent = `
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 8px;
-    margin-top: 10px;
+    margin-top: 8px;
   }
 
   .note-card {
     background: #f8fafc;
     border: 1px solid #e2e8f0;
-    border-left: 4px solid #2563eb;
-    border-radius: 6px;
-    padding: 8px 12px;
-    font-size: 9.5pt;
+    border-left: 3.5px solid #2563eb;
+    border-radius: 5px;
+    padding: 7px 10px;
+    font-size: 9pt;
   }
 
   .note-card .title {
@@ -233,34 +223,34 @@ const htmlContent = `
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 18px;
-    height: 18px;
+    width: 17px;
+    height: 17px;
     background: #ef4444;
     color: #ffffff;
     border-radius: 50%;
-    font-size: 9pt;
+    font-size: 8.5pt;
     font-weight: 800;
   }
 
-  .scenario-box {
-    background: #eff6ff;
-    border: 1px dashed #3b82f6;
-    border-radius: 6px;
-    padding: 8px 12px;
+  .spec-box {
+    background: #f0fdf4;
+    border: 1px solid #86efac;
+    border-radius: 5px;
+    padding: 7px 11px;
     margin-top: 8px;
-    font-size: 9pt;
-    color: #1e40af;
+    font-size: 8.8pt;
+    color: #166534;
   }
 
-  .scenario-box strong {
-    color: #1e3a8a;
+  .spec-box strong {
+    color: #14532d;
   }
 
   .footer-tip {
-    font-size: 8.5pt;
-    color: #64748b;
-    border-top: 1px solid #e2e8f0;
-    padding-top: 6px;
+    font-size: 8pt;
+    color: #94a3b8;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 4px;
     margin-top: 8px;
     text-align: right;
   }
@@ -268,20 +258,25 @@ const htmlContent = `
   .table-clean {
     width: 100%;
     border-collapse: collapse;
-    margin: 10px 0;
-    font-size: 9.5pt;
+    margin: 8px 0;
+    font-size: 9pt;
   }
 
   .table-clean th {
     background: #1e3a8a;
     color: white;
-    padding: 6px 10px;
+    padding: 6px 9px;
     text-align: left;
+    font-weight: 600;
   }
 
   .table-clean td {
-    padding: 6px 10px;
+    padding: 6px 9px;
     border-bottom: 1px solid #e2e8f0;
+  }
+
+  .table-clean tr:nth-child(even) {
+    background: #f8fafc;
   }
 </style>
 </head>
@@ -292,18 +287,21 @@ const htmlContent = `
 <!-- ============================================================== -->
 <div class="page">
   <div class="cover">
-    <div class="cover-icon">🚗 📋 ✨</div>
+    <div class="cover-icon">🚚 📋 ⚙️</div>
     <h1 class="cover-title">Информационная система<br>транспортного отдела</h1>
-    <div class="cover-subtitle">Наглядное иллюстрированное руководство пользователя</div>
-    <div class="cover-badge">Версия 1.0 • С наглядными скриншотами и пометками</div>
+    <div class="cover-subtitle">Регламент и практическое руководство пользователя</div>
+    <div class="cover-badge">Версия системы 1.0 • Иллюстрированное издание</div>
 
-    <div class="cover-greeting">
-      <h4>Дорогая мама!</h4>
+    <div class="cover-desc">
+      <h4>Назначение документа</h4>
       <p style="margin: 0 0 8px 0;">
-        Эта памятка сделана специально для вас, чтобы работать с машинами и документами было легко и спокойно. Больше не нужно путаться в старых Excel-таблицах и вручную вспоминать, кто на какой машине ездил.
+        Настоящее руководство определяет порядок работы с единой информационной системой транспортного отдела, заменяющей учет в разрозненных таблицах Excel.
+      </p>
+      <p style="margin: 0 0 8px 0;">
+        В документе описаны функциональные модули: оперативный учет автопарка, реестр водителей, оформление временных пересадок, выписка путевых листов, автоматическое определение нарушителей при обработке штрафов, фиксация ТО и ремонтов, контроль ГСМ, а также регламент создания резервных копий и установки обновлений.
       </p>
       <p style="margin: 0;">
-        На каждой странице вы увидите <b>реальную картинку экрана</b> с красными кружочками-номерами (①, ②, ③). Под картинкой сразу написано простое объяснение каждого шага.
+        Все ключевые элементы интерфейса снабжены скриншотами с номерными указателями (①, ②, ③) и детальными инструкциями.
       </p>
     </div>
   </div>
@@ -314,16 +312,15 @@ const htmlContent = `
 <!-- ============================================================== -->
 <div class="page">
   <div class="header">
-    <h2>1. Запуск программы и вход в систему</h2>
-    <span class="section-tag">Начало работы</span>
+    <h2>1. Запуск системы и авторизация</h2>
+    <span class="section-tag">Авторизация</span>
   </div>
   <p class="intro-text">
-    Утром дважды нажмите мышкой на файл <b>Запустить_Транспорт.bat</b>. Черное окно запуска сверните. Через пару секунд откроется окно входа.
+    Запуск программного комплекса выполняется запуском исполняемого файла <b>Запустить_Транспорт.bat</b> (или <code>START.bat</code>). После старта локального веб-сервера браузер открывает окно авторизации.
   </p>
 
   <div class="shot-wrap">
-    <img src="${images.login}" class="shot-img" alt="Экран входа">
-    <!-- Pins on Login Screen -->
+    <img src="${images.login}" class="shot-img" alt="Экран авторизации">
     <div class="pin" style="top: 48%; left: 44%;">①</div>
     <div class="pin" style="top: 57%; left: 44%;">②</div>
     <div class="pin" style="top: 67%; left: 50%;">③</div>
@@ -332,22 +329,49 @@ const htmlContent = `
   <div class="notes-grid">
     <div class="note-card">
       <div class="title"><span class="badge-num">①</span> Поле «Имя пользователя (Логин)»</div>
-      Введите ваш логин: <b>dispatcher</b> (на английском языке).
+      Ввод идентификатора учетной записи (например, <code>dispatcher</code>).
     </div>
     <div class="note-card">
       <div class="title"><span class="badge-num">②</span> Поле «Пароль»</div>
-      Введите пароль: <b>disp123</b> (символы будут скрыты точками).
+      Ввод пароля доступа (символы скрыты маской).
     </div>
     <div class="note-card" style="grid-column: span 2;">
-      <div class="title"><span class="badge-num">③</span> Синяя кнопка «Войти в систему»</div>
-      Нажмите её мышкой (или нажмите клавишу Enter на клавиатуре). Вы сразу попадете на главный экран.
+      <div class="title"><span class="badge-num">③</span> Кнопка «Войти в систему»</div>
+      Инициация проверки учетных данных и переход к главному интерфейсу.
     </div>
   </div>
 
-  <div class="scenario-box">
-    💡 <b>Подсказка по учетным записям:</b> Для работы диспетчера входите под <code>dispatcher / disp123</code>. Если нужно показать директору отчеты без права случайного изменения — используйте вход <code>viewer / view123</code>.
-  </div>
-  <div class="footer-tip">Страница 1 • Начало работы</div>
+  <table class="table-clean" style="margin-top: 10px;">
+    <thead>
+      <tr>
+        <th>Роль</th>
+        <th>Логин</th>
+        <th>Пароль</th>
+        <th>Предоставляемые права</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>Диспетчер</b></td>
+        <td><code>dispatcher</code></td>
+        <td><code>disp123</code></td>
+        <td>Полный операционный доступ: редактирование ТС, водителей, путевых, штрафов, ТО, ГСМ.</td>
+      </tr>
+      <tr>
+        <td><b>Руководитель</b></td>
+        <td><code>viewer</code></td>
+        <td><code>view123</code></td>
+        <td>Аналитический доступ: просмотр дашборда, фильтрация данных, экспорт отчетов в Excel.</td>
+      </tr>
+      <tr>
+        <td><b>Администратор</b></td>
+        <td><code>admin</code></td>
+        <td><code>admin123</code></td>
+        <td>Системный доступ: создание/удаление учетных записей, журнал аудита, бэкапы.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="footer-tip">Страница 1 • Авторизация и разграничение прав</div>
 </div>
 
 <!-- ============================================================== -->
@@ -355,15 +379,15 @@ const htmlContent = `
 <!-- ============================================================== -->
 <div class="page">
   <div class="header">
-    <h2>2. Дашборд (Главный экран)</h2>
-    <span class="section-tag">Сводка и внимание</span>
+    <h2>2. Сводный дашборд оперативных показателей</h2>
+    <span class="section-tag">Мониторинг</span>
   </div>
   <p class="intro-text">
-    Здесь каждое утро программа сама собирает всю главную сводку: сколько машин на линии, где заканчивается страховка и какие штрафы не оплачены.
+    Экран предназначен для непрерывного контроля ключевых параметров автопарка, сроков действия разрешительных документов и статуса штрафов.
   </p>
 
   <div class="shot-wrap">
-    <img src="${images.dashboard}" class="shot-img" alt="Дашборд">
+    <img src="${images.dashboard}" class="shot-img" alt="Дашборд показателей">
     <div class="pin" style="top: 14%; left: 32%;">①</div>
     <div class="pin" style="top: 36%; left: 40%;">②</div>
     <div class="pin" style="top: 72%; left: 40%;">③</div>
@@ -372,24 +396,27 @@ const htmlContent = `
 
   <div class="notes-grid">
     <div class="note-card">
-      <div class="title"><span class="badge-num">①</span> Карточки ключевых показателей</div>
-      Сразу видно: сколько всего машин в компании (217+), сколько сейчас работают на линии, сколько стоят на СТО в ремонте и сколько в резерве.
+      <div class="title"><span class="badge-num">①</span> Индикаторы баланса парка</div>
+      Отображение суммарного количества ТС (217+), единиц в эксплуатации, находящихся на СТО и в резерве.
     </div>
     <div class="note-card">
-      <div class="title"><span class="badge-num">②</span> Блок внимания: Срочный техосмотр и страховка</div>
-      <b>Самое полезное место!</b> Программа сама находит машины, у которых осталось меньше 30 дней страховки или техосмотра, чтобы вы успели заранее записаться.
+      <div class="title"><span class="badge-num">②</span> Виджет упреждающего контроля ТО и страховок</div>
+      Автоматическая фильтрация транспортных средств, до окончания срока техосмотра или страхования которых осталось менее 30 дней.
     </div>
     <div class="note-card">
-      <div class="title"><span class="badge-num">③</span> Реестр свежих неоплаченных штрафов</div>
-      Показывает последние поступившие штрафы, по которым водители еще не предоставили квитанции об оплате.
+      <div class="title"><span class="badge-num">③</span> Реестр неоплаченной задолженности</div>
+      Список активных штрафов с указанием сумм, подразделений и ответственных лиц.
     </div>
     <div class="note-card">
-      <div class="title"><span class="badge-num">④</span> Главное меню навигации</div>
-      Все разделы системы всегда под рукой слева: Автопарк, Водители, Пересадки, Путевые, Штрафы, ТО, ГСМ и Отчеты.
+      <div class="title"><span class="badge-num">④</span> Модульное меню разделов</div>
+      Быстрый переход между функциональными блоками системы.
     </div>
   </div>
 
-  <div class="footer-tip">Страница 2 • Главный экран</div>
+  <div class="spec-box">
+    <b>Порядок утреннего контроля:</b> Проверить виджет ②. По автомобилям в желтой и красной зонах заблаговременно запланировать прохождение осмотра или переоформление полиса страхования.
+  </div>
+  <div class="footer-tip">Страница 2 • Мониторинг ключевых показателей</div>
 </div>
 
 <!-- ============================================================== -->
@@ -397,15 +424,15 @@ const htmlContent = `
 <!-- ============================================================== -->
 <div class="page">
   <div class="header">
-    <h2>3. Автопарк и цветной «Светофор» сроков</h2>
-    <span class="section-tag">Реестр автомобилей</span>
+    <h2>3. Учет автопарка и контроль сроков действия документов</h2>
+    <span class="section-tag">Автопарк</span>
   </div>
   <p class="intro-text">
-    Полный список всех 217+ автомобилей компании. Программа подсказывает цветом статус документов каждой машины.
+    Реестр содержит полные сведения обо всех 217+ автомобилях компаний («Meganet», «Elite ProBuilding», «NLS», «СвязьСервисКомплект»).
   </p>
 
   <div class="shot-wrap">
-    <img src="${images.vehicles}" class="shot-img" alt="Автопарк">
+    <img src="${images.vehicles}" class="shot-img" alt="Реестр автопарка">
     <div class="pin" style="top: 13%; left: 24%;">①</div>
     <div class="pin" style="top: 13%; left: 88%;">②</div>
     <div class="pin" style="top: 13%; left: 74%;">③</div>
@@ -415,29 +442,29 @@ const htmlContent = `
 
   <div class="notes-grid">
     <div class="note-card">
-      <div class="title"><span class="badge-num">①</span> Быстрый поиск машины</div>
-      Введите любые цифры или буквы номера (например, <code>014</code> или <code>Cobalt</code>) — список отфильтруется мгновенно!
+      <div class="title"><span class="badge-num">①</span> Строка поиска и фильтрации</div>
+      Быстрый поиск по государственному номеру (включая слитное и раздельное написание), марке, модели или подразделению.
     </div>
     <div class="note-card">
-      <div class="title"><span class="badge-num">②</span> Кнопка «+ Добавить автомобиль»</div>
-      Если компания приобрела новую машину, нажмите сюда и введите госномер, марку и дату страховки.
+      <div class="title"><span class="badge-num">②</span> Кнопка добавления ТС</div>
+      Ввод нового транспортного средства с фиксацией VIN, данных техпаспорта и сроков осмотра.
     </div>
     <div class="note-card">
-      <div class="title"><span class="badge-num">③</span> Кнопка «Выгрузить в Excel»</div>
-      В 1 клик скачивает на компьютер красивую готовую таблицу со всеми машинами, водителями и цветными статусами.
+      <div class="title"><span class="badge-num">③</span> Экспорт данных в Excel</div>
+      Генерация реестра парка в формате <code>.xlsx</code> с сохранением цветовой индикации сроков.
     </div>
     <div class="note-card">
-      <div class="title"><span class="badge-num">④</span> Цветной светофор сроков</div>
-      🟢 <b>Зеленый:</b> срок в порядке (>30 дней)<br>
-      🟡 <b>Желтый:</b> осталось меньше месяца (пора продлевать)<br>
-      🔴 <b>Красный:</b> просрочено! Выезд запрещен.
+      <div class="title"><span class="badge-num">④</span> Цветовая индикация состояния (Светофор)</div>
+      🟢 <b>Зеленый:</b> срок действия >30 дней.<br>
+      🟡 <b>Желтый:</b> предупреждение (<30 дней).<br>
+      🔴 <b>Красный:</b> срок истек. Выпуск на линию запрещен.
     </div>
   </div>
 
-  <div class="scenario-box">
-    🔍 <b>Как открыть карточку машины:</b> Нажмите прямо на синий госномер <span class="badge-num">⑤</span> — откроется полное досье авто: кто сейчас за рулем, все прошлые штрафы, ремонты и путевые листы.
+  <div class="spec-box">
+    <b>Карточка транспортного средства:</b> Клик по госномеру <span class="badge-num">⑤</span> открывает карточку ТС с отображением текущего водителя, истории пересадок, путевых листов, штрафов и ремонтов.
   </div>
-  <div class="footer-tip">Страница 3 • Автопарк</div>
+  <div class="footer-tip">Страница 3 • Учет автопарка и карточка ТС</div>
 </div>
 
 <!-- ============================================================== -->
@@ -445,15 +472,15 @@ const htmlContent = `
 <!-- ============================================================== -->
 <div class="page">
   <div class="header">
-    <h2>4. Пересадки и замены (Решение путаницы)</h2>
-    <span class="section-tag">Журнал передачи авто</span>
+    <h2>4. Журнал пересадок и временных закреплений</h2>
+    <span class="section-tag">Пересадки</span>
   </div>
   <p class="intro-text">
-    <b>Главное спасение от путаницы!</b> Когда постоянный водитель болеет или уходит в отпуск, и машину передают другому — зафиксируйте это здесь за 10 секунд.
+    Модуль обеспечивает хронологический учет передачи автомобилей между сотрудниками при отпусках, ремонтах и ротации персонала.
   </p>
 
   <div class="shot-wrap">
-    <img src="${images.assignments}" class="shot-img" alt="Пересадки">
+    <img src="${images.assignments}" class="shot-img" alt="Журнал пересадок">
     <div class="pin" style="top: 13%; left: 88%;">①</div>
     <div class="pin" style="top: 40%; left: 32%;">②</div>
     <div class="pin" style="top: 40%; left: 70%;">③</div>
@@ -461,23 +488,23 @@ const htmlContent = `
 
   <div class="notes-grid">
     <div class="note-card" style="grid-column: span 2;">
-      <div class="title"><span class="badge-num">①</span> Синяя кнопка «+ Новая пересадка / замена»</div>
-      Нажмите её, выберите автомобиль из списка, укажите, кому временно передается машина, и выберите причину (<i>«Отпуск»</i>, <i>«Ремонт авто»</i>, <i>«Подмена»</i>).
+      <div class="title"><span class="badge-num">①</span> Кнопка «+ Новая пересадка / замена»</div>
+      Регистрация передачи ТС: выбор автомобиля, выбор принимающего водителя, фиксация даты и причины передачи (<i>«Отпуск»</i>, <i>«Ремонт авто»</i>, <i>«Служебная необходимость»</i>).
     </div>
     <div class="note-card">
-      <div class="title"><span class="badge-num">②</span> Закрепленный водитель и телефон</div>
-      В таблице всегда видно, кто именно сейчас сидит за рулем этой машины и по какому номеру ему звонить.
+      <div class="title"><span class="badge-num">②</span> Текущий водитель и контактные данные</div>
+      Отображение фактического пользователя автомобиля на текущий момент времени с рабочим телефоном.
     </div>
     <div class="note-card">
-      <div class="title"><span class="badge-num">③</span> Причина и период передачи</div>
-      Система точно фиксирует дату начала и окончания подмены.
+      <div class="title"><span class="badge-num">③</span> Основание передачи</div>
+      Фиксация причины временного или постоянного закрепления с автоматическим архивированием предыдущей привязки.
     </div>
   </div>
 
-  <div class="scenario-box">
-    ⚡ <b>Почему это очень важно:</b> Когда с камер придет штраф, вам не нужно вспоминать, кто ездил на этой машине две недели назад. Программа сама сопоставит дату штрафа с этим журналом и найдет истинного нарушителя!
+  <div class="spec-box">
+    <b>Принцип сквозной привязки:</b> При регистрации нарушения ПДД система автоматически сопоставляет дату правонарушения с периодом действия записи в журнале пересадок, безошибочно определяя фактического нарушителя.
   </div>
-  <div class="footer-tip">Страница 4 • Пересадки и замены</div>
+  <div class="footer-tip">Страница 4 • Учет движения ТС и закреплений</div>
 </div>
 
 <!-- ============================================================== -->
@@ -485,11 +512,11 @@ const htmlContent = `
 <!-- ============================================================== -->
 <div class="page">
   <div class="header">
-    <h2>5. Путевые листы и еженедельный контроль</h2>
-    <span class="section-tag">Учет пробега и возврата</span>
+    <h2>5. Путевые листы и еженедельный контроль возврата</h2>
+    <span class="section-tag">Путевые листы</span>
   </div>
   <p class="intro-text">
-    Электронный учет всех маршрутных листов. Спидометры, расчет пробега и контроль возврата корешков по неделям.
+    Модуль автоматизирует выписку путевых листов, расчет пробега по показаниям одометра и мониторинг еженедельной сдачи корешков.
   </p>
 
   <div class="shot-wrap">
@@ -503,23 +530,23 @@ const htmlContent = `
   <div class="notes-grid">
     <div class="note-card">
       <div class="title"><span class="badge-num">①</span> Кнопка «+ Выдать путевой лист»</div>
-      Выберите авто — имя водителя подставится само! Введите спидометр выезда и месяца.
+      Формирование нового листа с автоподстановкой закрепленного водителя и начальных показаний одометра.
     </div>
     <div class="note-card">
-      <div class="title"><span class="badge-num">②</span> Авторасчет километража</div>
-      Когда водитель сдает лист со спидометром возврата, программа сама вычитает начальный пробег и показывает точный километраж.
+      <div class="title"><span class="badge-num">②</span> Расчет суммарного пробега</div>
+      Автоматическое вычисление фактически пройденной дистанции: <code>Пробег = Одометр_возврат - Одометр_выезд</code>.
     </div>
     <div class="note-card">
-      <div class="title"><span class="badge-num">③</span> Еженедельный контроль возврата (1, 2, 3, 4 недели)</div>
-      Когда водитель приносит корешок за неделю, просто ставьте галочку в строке. Сразу видно, кто сдал документы вовремя, а кто задерживает.
+      <div class="title"><span class="badge-num">③</span> Чеклист еженедельной сдачи (1–4 недели)</div>
+      Фиксация возврата отрывных талонов и маршрутных листов по неделям месяца.
     </div>
     <div class="note-card">
-      <div class="title"><span class="badge-num">④</span> Статус листа («Сдан» / «Утерян»)</div>
-      Если водитель потерял путевой лист — отметьте статус «Утерян». Программа зафиксирует это и позволит выдать дубликат.
+      <div class="title"><span class="badge-num">④</span> Статусный учет и обработка утерь</div>
+      Перевод в статус «Сдан» либо маркировка флагом «Утерян» с возможностью выдачи дубликата.
     </div>
   </div>
 
-  <div class="footer-tip">Страница 5 • Путевые листы</div>
+  <div class="footer-tip">Страница 5 • Учет путевой документации и пробега</div>
 </div>
 
 <!-- ============================================================== -->
@@ -527,15 +554,15 @@ const htmlContent = `
 <!-- ============================================================== -->
 <div class="page">
   <div class="header">
-    <h2>6. Штрафы ПДД и Служебные записки в СБ</h2>
-    <span class="section-tag">Штрафы и автоопределение</span>
+    <h2>6. Штрафы ПДД и формирование служебных записок в СБ</h2>
+    <span class="section-tag">Штрафы ПДД</span>
   </div>
   <p class="intro-text">
-    Учет всех штрафов из бухгалтерии. Автоматическое определение водителя и генерация служебок для Службы безопасности.
+    Обработка постановлений об административных правонарушениях, автоматическое определение водителя и выгрузка ведомостей задолженности.
   </p>
 
   <div class="shot-wrap">
-    <img src="${images.fines}" class="shot-img" alt="Штрафы">
+    <img src="${images.fines}" class="shot-img" alt="Штрафы ПДД">
     <div class="pin" style="top: 13%; left: 88%;">①</div>
     <div class="pin" style="top: 13%; left: 66%;">②</div>
     <div class="pin" style="top: 40%; left: 34%;">③</div>
@@ -545,26 +572,26 @@ const htmlContent = `
   <div class="notes-grid">
     <div class="note-card">
       <div class="title"><span class="badge-num">①</span> Кнопка «+ Внести штраф»</div>
-      Введите номер авто, дату нарушения и сумму штрафа. <b>Поле «Водитель» можно не заполнять!</b> Программа сама вычислит водителя по дате.
+      Ввод реквизитов постановления (номер, дата нарушения, сумма). Поле водителя может оставаться пустым для автоопределения.
     </div>
     <div class="note-card">
-      <div class="title"><span class="badge-num">②</span> Кнопка «Служебная записка в СБ (.xlsx)»</div>
-      <b>Одной кнопкой</b> скачивает готовый файл Excel со списком водителей, отказавшихся платить штрафы, для Службы безопасности.
+      <div class="title"><span class="badge-num">②</span> Экспорт служебной записки в СБ</div>
+      Генерация официального документа <code>.xlsx</code> со списком сотрудников, имеющих непогашенную задолженность, для Службы безопасности.
     </div>
     <div class="note-card">
-      <div class="title"><span class="badge-num">③</span> Ответственный водитель</div>
-      Программа автоматически показывает ФИО сотрудника, который был за рулем в момент фиксации камерой.
+      <div class="title"><span class="badge-num">③</span> Автоматически определенный водитель</div>
+      Идентификация ответственного лица на основе журнала пересадок на момент фиксации нарушения.
     </div>
     <div class="note-card">
-      <div class="title"><span class="badge-num">④</span> Статус оплаты штрафа</div>
-      Когда водитель оплатит через Kaspi, измените статус на «Оплачен» и укажите дату — штраф снимется с контроля.
+      <div class="title"><span class="badge-num">④</span> Статусы жизненного цикла штрафа</div>
+      «Новый» → «Оповещен» → «Оплачен через Kaspi» (с фиксацией даты оплаты) / «Отказ от оплаты».
     </div>
   </div>
 
-  <div class="scenario-box">
-    👮 <b>Что делать с должниками:</b> Если водитель спорит или не платит добровольно, нажмите значок карандаша и включите галочку <i>«В служебную записку»</i>. Он автоматически попадет в официальный документ в СБ <span class="badge-num">②</span>.
+  <div class="spec-box">
+    <b>Порядок передачи задолженности в СБ:</b> По штрафам с отказом от добровольной оплаты активировать опцию <i>«В служебную записку»</i>. Документ формируется нажатием кнопки <span class="badge-num">②</span>.
   </div>
-  <div class="footer-tip">Страница 6 • Штрафы ПДД</div>
+  <div class="footer-tip">Страница 6 • Учет штрафов и претензионная работа</div>
 </div>
 
 <!-- ============================================================== -->
@@ -572,11 +599,11 @@ const htmlContent = `
 <!-- ============================================================== -->
 <div class="page">
   <div class="header">
-    <h2>7. ТО, Ремонты и Эвакуация</h2>
-    <span class="section-tag">Техническое обслуживание</span>
+    <h2>7. Техническое обслуживание, ремонты и эвакуация</h2>
+    <span class="section-tag">ТО и Ремонты</span>
   </div>
   <p class="intro-text">
-    История всех ремонтов, замен масла, геометрии и эвакуаций на базу Емцова 11.
+    Регистрация планового сервисного обслуживания, кузовных и агрегатных ремонтов, а также случаев транспортировки эвакуатором.
   </p>
 
   <div class="shot-wrap">
@@ -589,22 +616,22 @@ const htmlContent = `
   <div class="notes-grid">
     <div class="note-card" style="grid-column: span 2;">
       <div class="title"><span class="badge-num">①</span> Кнопка «+ Заявка на ТО / Ремонт»</div>
-      Нажмите сюда, чтобы зафиксировать направление машины на сервис (замена масла, фильтров, колодок, лобового стекла или геометрия колес).
+      Создание сервисной карточки: фиксация пробега, типа обслуживания (плановое ТО, замена масла, лобовое стекло, геометрия, эвакуация).
     </div>
     <div class="note-card">
-      <div class="title"><span class="badge-num">②</span> Вид работ и описание поломки</div>
-      Четко фиксируется, что именно сломалось и на каком пробеге производился ремонт.
+      <div class="title"><span class="badge-num">②</span> Описание неисправности и регламентные работы</div>
+      Детализация дефектов, причин направления на сервис и перечня замененных запчастей.
     </div>
     <div class="note-card">
-      <div class="title"><span class="badge-num">③</span> Подрядчик и номер документа (СТО / Эвакуатор)</div>
-      Учет эвакуаторов ИП Мухраев, номеров ЕРП и подрядчиков (СТО Хабаров и др.).
+      <div class="title"><span class="badge-num">③</span> Подрядная организация и номер акта</div>
+      Учет сервисных центров (СТО Хабаров и др.), номеров ЕРП и услуг эвакуатора (ИП Мухраев, доставка на базу Емцова 11).
     </div>
   </div>
 
-  <div class="scenario-box">
-    🔧 <b>Автоматический статус машины:</b> Пока машина находится в ремонте, ее статус на дашборде горит желтым <i>«В ремонте»</i>, что исключает ошибочную выписку путевого листа на неисправное авто.
+  <div class="spec-box">
+    <b>Синхронизация статуса:</b> Перевод заявки в статус «В ремонте» автоматически изменяет статус автомобиля в главном реестре, исключая его ошибочное назначение на маршрут.
   </div>
-  <div class="footer-tip">Страница 7 • ТО и Ремонты</div>
+  <div class="footer-tip">Страница 7 • Технический надзор и обслуживание</div>
 </div>
 
 <!-- ============================================================== -->
@@ -612,11 +639,11 @@ const htmlContent = `
 <!-- ============================================================== -->
 <div class="page">
   <div class="header">
-    <h2>8. Учет ГСМ и Топливных карт</h2>
-    <span class="section-tag">Расход бензина и дизеля</span>
+    <h2>8. Контроль расхода ГСМ и баланса топливных карт</h2>
+    <span class="section-tag">Учет ГСМ</span>
   </div>
   <p class="intro-text">
-    Контроль фактических заправок по топливным картам и автоматическое выявление перерасхода топлива.
+    Учет фактической выборки топлива по безналичным картам и автоматическое сопоставление с нормативным расходом.
   </p>
 
   <div class="shot-wrap">
@@ -629,20 +656,20 @@ const htmlContent = `
   <div class="notes-grid">
     <div class="note-card" style="grid-column: span 2;">
       <div class="title"><span class="badge-num">①</span> Кнопка «+ Внести заправку ГСМ»</div>
-      Выберите авто, введите номер топливной карты, фактически заправленные литры по чеку и пройденный километраж.
+      Ввод данных транзакции: привязка к номеру топливной карты, фактически заправленный объем (л), пройденный километраж.
     </div>
     <div class="note-card">
-      <div class="title"><span class="badge-num">②</span> Нормативный расчет по километражу</div>
-      Программа сама берет норму расхода для этой модели (например, 10 л / 100 км) и считает, сколько литров должно было уйти по норме.
+      <div class="title"><span class="badge-num">②</span> Расчет расхода по норме</div>
+      Вычисление нормативного объема списания топлива на основании утвержденной нормы для модели ТС: <code>(Пробег * Норма) / 100</code>.
     </div>
     <div class="note-card">
-      <div class="title"><span class="badge-num">③</span> Отклонение: Экономия или Перерасход</div>
-      🟢 <b>Зеленый цвет</b> — норма соблюдена или экономия.<br>
-      🔴 <b>Красный цвет</b> — перерасход бензина (сигнал для проверки водителя).
+      <div class="title"><span class="badge-num">③</span> Выявление отклонений (Экономия / Перерасход)</div>
+      🟢 <b>Зеленый:</b> фактический расход не превышает нормативный (экономия).<br>
+      🔴 <b>Красный:</b> перерасход топлива относительно нормы (требует служебной проверки).
     </div>
   </div>
 
-  <div class="footer-tip">Страница 8 • Учет ГСМ</div>
+  <div class="footer-tip">Страница 8 • Учет горюче-смазочных материалов</div>
 </div>
 
 <!-- ============================================================== -->
@@ -650,15 +677,15 @@ const htmlContent = `
 <!-- ============================================================== -->
 <div class="page">
   <div class="header">
-    <h2>9. Резервные копии и Обновление в 1 клик</h2>
-    <span class="section-tag">Безопасность и обновления</span>
+    <h2>9. Резервное копирование базы данных и обновления</h2>
+    <span class="section-tag">Безопасность</span>
   </div>
   <p class="intro-text">
-    Полная гарантия сохранности данных: копии сохраняются на компьютере, отправляются сыну на Google Диск, а программа обновляется нажатием одной кнопки.
+    Регламент резервного сохранения данных автопарка, облачной синхронизации и установки программных обновлений.
   </p>
 
   <div class="shot-wrap">
-    <img src="${images.backups}" class="shot-img" alt="Резервные копии и обновления">
+    <img src="${images.backups}" class="shot-img" alt="Резервное копирование и обновления">
     <div class="pin" style="top: 13%; left: 88%;">①</div>
     <div class="pin" style="top: 24%; left: 80%;">②</div>
     <div class="pin" style="top: 48%; left: 50%;">③</div>
@@ -667,89 +694,93 @@ const htmlContent = `
 
   <div class="notes-grid">
     <div class="note-card">
-      <div class="title"><span class="badge-num">①</span> Кнопка «Создать резервную копию сейчас»</div>
-      Программа сама делает бэкапы каждую ночь в 00:00, но вы в любой момент можете нажать эту кнопку перед важными изменениями.
+      <div class="title"><span class="badge-num">①</span> Внеплановое создание резервной копии</div>
+      Ручное сохранение архива базы данных в директорию <code>backend/data/backups/</code>.
     </div>
     <div class="note-card">
-      <div class="title"><span class="badge-num">②</span> Зеленая кнопка «Обновить всю программу»</div>
-      <b>Когда сын выпустит обновление</b>, здесь загорится зеленая кнопка. Нажмите её — программа обновится сама за 3 секунды, не трогая базу данных!
+      <div class="title"><span class="badge-num">②</span> Автоматическое обновление системы</div>
+      Проверка наличия новых релизов в репозитории GitHub и установка обновления в 1 клик с предварительным автобэкапом.
     </div>
     <div class="note-card">
-      <div class="title"><span class="badge-num">③</span> Автоматическая выгрузка на Google Диск</div>
-      Каждый созданный бэкап улетает в облако на Google Диск сына. Даже если компьютер сломается — все данные в безопасности.
+      <div class="title"><span class="badge-num">③</span> Облачная выгрузка на Google Диск</div>
+      Автоматическая передача каждого созданного архива в облачное хранилище через защищенный веб-хук.
     </div>
     <div class="note-card">
-      <div class="title"><span class="badge-num">④</span> Список локальных копий на компьютере</div>
-      Таблица архивов со временем создания и размером, готовых к быстрому восстановлению.
+      <div class="title"><span class="badge-num">④</span> Журнал резервных копий</div>
+      Таблица доступных точек восстановления с фиксацией даты, времени и размера архива.
     </div>
   </div>
 
-  <div class="footer-tip">Страница 9 • Резервные копии и Обновление</div>
+  <div class="spec-box">
+    <b>Автоматическое расписание:</b> Резервный снимок базы данных создается встроенным планировщиком ежедневно в <b>00:00</b> без участия оператора.
+  </div>
+  <div class="footer-tip">Страница 9 • Обеспечение отказоустойчивости</div>
 </div>
 
 <!-- ============================================================== -->
-<!-- 11. CHEATSHEET -->
+<!-- 11. REGULATION TABLE -->
 <!-- ============================================================== -->
 <div class="page">
   <div class="header">
-    <h2>10. Краткая памятка на каждый день</h2>
-    <span class="section-tag">Шпаргалка</span>
+    <h2>10. Сводный регламент типовых операций</h2>
+    <span class="section-tag">Регламент</span>
   </div>
 
   <table class="table-clean">
     <thead>
       <tr>
-        <th style="width: 30%;">Ситуация</th>
-        <th style="width: 70%;">Что нужно сделать в программе</th>
+        <th style="width: 25%;">Событие</th>
+        <th style="width: 75%;">Порядок действий оператора</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><b>Утром пришла на работу</b></td>
-        <td>Дважды нажмите на <code>Запустить_Транспорт.bat</code>. Откроется браузер. Введите <code>dispatcher / disp123</code>. Проверьте карточки на Дашборде.</td>
+        <td><b>Начало рабочего дня</b></td>
+        <td>Запустить <code>Запустить_Транспорт.bat</code>. Выполнить вход под учетной записью <code>dispatcher</code>. Проверить на Дашборде блок предупреждений по срокам ТО и страховок.</td>
       </tr>
       <tr>
-        <td><b>Водитель ушел в отпуск / заболел</b></td>
-        <td>Откройте раздел <b>«Пересадки и замены»</b> → нажмите «+ Новая пересадка» → выберите авто и того, кто будет временно подменять.</td>
+        <td><b>Замена водителя / Отпуск</b></td>
+        <td>Открыть раздел <b>«Пересадки и замены»</b> → «+ Новая пересадка» → указать авто, временного водителя и основание.</td>
       </tr>
       <tr>
-        <td><b>Пришел штраф с камеры Сергек</b></td>
-        <td>Откройте <b>«Штрафы»</b> → «+ Внести штраф» → введите номер авто, дату и сумму. Поле водителя оставьте пустым — программа найдет его сама!</td>
+        <td><b>Поступление постановления о штрафе</b></td>
+        <td>Раздел <b>«Штрафы»</b> → «+ Внести штраф» → указать номер авто, дату и сумму. Водитель определяется автоматически на основе пересадок.</td>
       </tr>
       <tr>
-        <td><b>Водитель отказывается платить штраф</b></td>
-        <td>Поставьте в штрафе галочку «В служебную записку» и нажмите сверху синюю кнопку <b>«Служебная записка в СБ (.xlsx)»</b>. Файл готов!</td>
+        <td><b>Отказ водителя от оплаты штрафа</b></td>
+        <td>В свойствах штрафа активировать признак «В служебную записку». Нажать <b>«Служебная записка в СБ (.xlsx)»</b> для выгрузки реестра в Службу безопасности.</td>
       </tr>
       <tr>
-        <td><b>Нужно узнать, когда техосмотр / страховка</b></td>
-        <td>Откройте <b>«Автопарк»</b>: посмотрите на кружочки. Желтый = пора звонить, Красный = машина не должна выезжать.</td>
+        <td><b>Выпуск ТС на маршрут</b></td>
+        <td>Раздел <b>«Путевые листы»</b> → «+ Выдать путевой лист» → зафиксировать начальный одометр. По возвращении внести конечный одометр.</td>
       </tr>
       <tr>
-        <td><b>Водитель потерял путевой лист</b></td>
-        <td>Откройте <b>«Путевые листы»</b> → откройте лист → поставьте статус «Утерян» → выпишите дубликат с тем же номером.</td>
+        <td><b>Сдача еженедельной отчетности</b></td>
+        <td>В разделе «Путевые листы» проставить отметки в чеклисте возврата (Недели 1–4).</td>
       </tr>
       <tr>
-        <td><b>Сын сказал: «Я выпустил обновление»</b></td>
-        <td>Откройте раздел <b>«Резервные копии»</b> → нажмите зеленую кнопку <b>«Обновить всю программу»</b>. Готово!</td>
+        <td><b>Направление ТС на ремонт / СТО</b></td>
+        <td>Раздел <b>«ТО, Ремонты, Эвакуация»</b> → оформить заявку с указанием СТО или эвакуатора ИП Мухраев.</td>
       </tr>
       <tr>
-        <td><b>Случайно закрыла вкладку в браузере</b></td>
-        <td>Откройте браузер и напишите адрес: <code>http://localhost:8000</code>. Всё откроется ровно там, где вы остановились.</td>
+        <td><b>Формирование отчета руководству</b></td>
+        <td>Раздел «Автопарк» → нажать <b>«Выгрузить в Excel»</b>. Сформированный файл содержит полный актуальный статус парка.</td>
       </tr>
       <tr>
-        <td><b>Вечером ухожу домой</b></td>
-        <td>Просто закройте вкладку в браузере и закройте черное окно. Все данные сохранены автоматически!</td>
+        <td><b>Установка обновления ПО</b></td>
+        <td>Раздел «Резервные копии» → нажать кнопку <b>«Обновить всю программу»</b>. Система автоматически выполнит бэкап и перезапустится.</td>
+      </tr>
+      <tr>
+        <td><b>Завершение работы</b></td>
+        <td>Закрыть вкладку браузера и окно консоли запуска. Все транзакции фиксируются в базе данных моментально.</td>
       </tr>
     </tbody>
   </table>
 
-  <div style="background: #f0fdf4; border: 1px solid #86efac; border-radius: 8px; padding: 14px 20px; margin-top: 20px; text-align: center;">
-    <h3 style="color: #166534; margin: 0 0 6px 0;">❤️ Приятной и легкой работы!</h3>
-    <p style="color: #15803d; margin: 0; font-size: 10.5pt;">
-      Программа сделана так, чтобы беречь ваше время и нервы. Если возникнет любой вопрос — сын всегда поможет и подскажет!
-    </p>
+  <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 6px; padding: 12px 16px; margin-top: 14px; text-align: center;">
+    <span style="font-size: 10pt; font-weight: 700; color: #1e3a8a;">Информационная система транспортного отдела • Эксплуатационная документация</span>
   </div>
-  <div class="footer-tip">Страница 10 • Шпаргалка на каждый день</div>
+  <div class="footer-tip">Страница 10 • Сводный регламент типовых операций</div>
 </div>
 
 </body>
