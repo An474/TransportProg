@@ -47,7 +47,7 @@ def get_waybills(
     q = db.query(Waybill)
 
     if query:
-        q = q.join(Vehicle).join(Driver).filter(
+        q = q.outerjoin(Vehicle).outerjoin(Driver).filter(
             or_(
                 Waybill.waybill_number.ilike(f"%{query}%"),
                 Vehicle.plate_number.ilike(f"%{query}%"),

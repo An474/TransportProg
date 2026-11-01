@@ -46,7 +46,7 @@ def get_fines(
     db: Session = Depends(get_db),
     current_user: User = Depends(get_current_user)
 ):
-    q = db.query(Fine).join(Vehicle)
+    q = db.query(Fine).outerjoin(Vehicle)
 
     if query:
         norm_q = normalize_plate(query)

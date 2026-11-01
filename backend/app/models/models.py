@@ -78,10 +78,10 @@ class Vehicle(Base):
     company = relationship("Company", back_populates="vehicles")
     department = relationship("Department", back_populates="vehicles")
     assignments = relationship("DriverAssignment", back_populates="vehicle", cascade="all, delete-orphan")
-    waybills = relationship("Waybill", back_populates="vehicle")
-    fines = relationship("Fine", back_populates="vehicle")
-    maintenance_records = relationship("MaintenanceRecord", back_populates="vehicle")
-    fuel_logs = relationship("FuelLog", back_populates="vehicle")
+    waybills = relationship("Waybill", back_populates="vehicle", cascade="all, delete-orphan")
+    fines = relationship("Fine", back_populates="vehicle", cascade="all, delete-orphan")
+    maintenance_records = relationship("MaintenanceRecord", back_populates="vehicle", cascade="all, delete-orphan")
+    fuel_logs = relationship("FuelLog", back_populates="vehicle", cascade="all, delete-orphan")
 
 class Driver(Base):
     __tablename__ = "drivers"

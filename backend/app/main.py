@@ -91,7 +91,8 @@ if os.path.exists(frontend_dist):
     async def serve_spa(full_path: str):
         # Allow API and Swagger docs through
         if full_path.startswith("api") or full_path.startswith("docs") or full_path.startswith("openapi.json"):
-            return None
+            from fastapi import HTTPException
+            raise HTTPException(status_code=404, detail="Маршрут не найден")
         file_path = os.path.join(frontend_dist, full_path)
         if os.path.exists(file_path) and os.path.isfile(file_path):
             return FileResponse(file_path)

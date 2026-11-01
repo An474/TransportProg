@@ -135,6 +135,7 @@ def export_vehicles_excel(db: Session = Depends(get_db), current_user: User = De
     )
 
 @router.get("/export/memo")
+@router.get("/export/memo-security")
 def export_memo_excel(db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
     """Exports the official debt/fine memo to Security Service."""
     fines = db.query(Fine).filter(
